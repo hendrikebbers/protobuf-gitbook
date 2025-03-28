@@ -29,7 +29,7 @@ cp -a $protos_dir/mirror/. $merged_protos_dir
 cp -a $protos_dir/platform/. $merged_protos_dir
 cp -a $protos_dir/sdk/. $merged_protos_dir
 cp -a $protos_dir/services/. $merged_protos_dir
-cp -a $protos_dir/streams/. $merged_protos_dir
+#cp -a $protos_dir/streams/. $merged_protos_dir
 
 echo "Step 4: Create Doc Files"
 docker run --rm \
