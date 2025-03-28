@@ -1,0 +1,38 @@
+{{- range $f := .Files }}
+----- START OF {{ $f.Name  }} -----
+
+# {{ $f.Name  }}
+{{ $f.Description }}
+
+{{ range $f.Services }}
+
+## Service: {{ .Name }}
+{{ .Description }}
+
+{{ range .Methods }}
+### Method: {{ .Name }}
+**Request:** {{ .RequestType }} 
+**Response:** {{ .ResponseType }} 
+{{ .Description }}
+{{ end }}
+{{ end }}
+
+{{ range $f.Messages }}
+## Message: {{ .Name }}
+{{ .Description }}
+
+{{ range .Fields }}
+- `{{ .Name }}` ({{ .Type }}): {{ .Description }}
+{{ end }}
+{{ end }}
+
+{{ range $f.Enums }}
+## Enum: {{ .Name }}
+{{ .Description }}
+
+{{ range .Values }}
+- `{{ .Name }}` = {{ .Number }}
+{{ end }}
+{{ end }}
+----- END OF {{ $f.Name  }} -----
+{{ end }}

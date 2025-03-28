@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.example;
+
+import "Person.proto";
+
+/// Describes a pet.
+message Pet {
+    /// Type of animal.
+     string animal = 1;
+
+    /// Owner of the pet.
+    optional Person owner = 2;
+}

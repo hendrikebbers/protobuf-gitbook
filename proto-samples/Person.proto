@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.example;
+
+/// Describes a person.
+message Person {
+  /// Name of person.
+   string name = 1;
+/// Age of person.
+ int32 age = 2;
+}

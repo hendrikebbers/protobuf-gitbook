@@ -1,0 +1,16 @@
+/**
+ * Booking related messages.
+ *
+ * This file is really just an example. The data model is completely
+ * fictional.
+ */
+syntax = "proto3";
+
+package com.example;
+
+/**
+ * Represents the booking status ID.
+ */
+message BookingStatusID {
+  int32 id = 1; /// Unique booking status ID.
+}
